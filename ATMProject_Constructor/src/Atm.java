@@ -5,7 +5,7 @@ public class Atm {
 public  void work(Accountt account) {
 		
 		
-	Login login = new Login();          // logini kontrol edeceğimiz için login class'ından bir obje oluşturuyoruz.
+	Login login = new Login();                        
 		
 	Scanner scanner = new Scanner (System.in);
 		
@@ -17,7 +17,7 @@ public  void work(Accountt account) {
 	int right_of_entry = 3;
 		
 	while (true) {
-		                                   //atm.work aldığı bilgileri aşağıya gönderecek.Ve koşula göre eğer doğru ise true değer yanlış ise false değer döndürelecek
+		                                   
 			
 		if (login.Login(account)) {
 				
@@ -30,7 +30,7 @@ public  void work(Accountt account) {
 			
 		System.out.println("Login failed");
 		
-		right_of_entry -=1;            // giriş hakkını azaltıyoruz.
+		right_of_entry -=1;            
 		
 		System.out.println("Remaining right of entry : " + right_of_entry);
 				
@@ -40,22 +40,22 @@ public  void work(Accountt account) {
 			
 		System.out.println("Your right to enter is finished!!");
 				
-		return;  //break yaparsak sadece döngü sonlanır. Bu yüzden return yazıyoruz.
+		return;  
 		}
 		}
 		
 	
-      System.out.println(" ******************************** "); //login işleminden sonra kullanıcıdan yapmak istediği işlemi almalıyız bu yüzden işlemler değişkenimizi oluşturduk.
-      
+      System.out.println(" ******************************** "); 
+	
       String transactions = "1.Operation : Balance Display\n "
                            +"2.Operation : Withdraw Money\n"
-	                       +"3.peration : Deposit Money\n"
-	                       +"Exit : q";
+	                   +"3.peration : Deposit Money\n"
+	                   +"Exit : q";
       System.out.println(transactions);
       System.out.println(" ********************************* ");
       
       
-   while(true) {                                          //Döngü true oldukça devam edecek kullanı q değerini girene kadar.
+   while(true) {                                          
     		
      System.out.print("Enter the transaction number: " );
      String operation = scanner.nextLine();
@@ -76,7 +76,7 @@ public  void work(Accountt account) {
         System.out.println("The amount you want to withdraw: ");
     	    
     	int amount = scanner.nextInt();
-    	scanner.nextLine();	              //İnt değeri aldıktan sonra döngü başa dönüp bakiye soracak bunun önüne geçmek için bu işlemi yaptık.
+    	scanner.nextLine();	              
     		
     	account.withdraw_money(amount);
     	}
@@ -93,7 +93,7 @@ public  void work(Accountt account) {
     	
     	else {
     			
-    	System.out.println("İnvalid transaction!");
+    	System.out.println("Ãnvalid transaction!");
     	}
     		
    }
